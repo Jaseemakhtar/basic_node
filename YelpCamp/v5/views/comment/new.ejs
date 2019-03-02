@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<div class="container" style="width:40%">
+   
+        
+            <h3><%= campground.title %></h3>
+            
+            <form method="POST" action="/campgrounds/<%= campground._id %>/comment">
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" name="comment[author]" placeholder="author" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="comment[text]" placeholder="text" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-md btn-block" value="Sumbit!" />
+                </div>
+            </form>
+            <a href="/campgrounds/<%= campground._id %>" >Go back.</a>
+        
+   
+</div>
+
+<% include ../partials/footer %>
